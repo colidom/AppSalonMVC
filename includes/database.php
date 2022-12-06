@@ -1,7 +1,6 @@
 <?php
 
-$db = mysqli_connect('localhost', 'root', '', '');
-
+$db = mysqli_connect('localhost', 'colidom', 'Mysql2021', '');
 
 if (!$db) {
     echo "Error: No se pudo conectar a MySQL.";
