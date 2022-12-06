@@ -9,11 +9,6 @@
             "Model\\": "./models"
         }
     },
-    "autoload": {
-        "psr-4": {
-            "Colidom\\AppSalonMvc\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "colidom",
