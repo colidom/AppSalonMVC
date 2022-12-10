@@ -24,7 +24,7 @@
 
     <div class="campo">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Tu Password" value="<?php echo s($usuario->password) ?>">
+        <input type="password" id="password" name="password" placeholder="Tu Password">
     </div>
 
     <input type="submit" value="Crear cuenta" class="boton">
