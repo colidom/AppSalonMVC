@@ -40,8 +40,11 @@ class LoginController
             // Revisar que alertas esté vacío
             if (empty($aleras)) {
                 // Verificar que el usuario no este registrado
+                $resultado = $usuario->existeUsuario();
 
-                /* $alertas['exito'][] = 'Cuenta creada correctamente'; */
+                if ($resultado->num_rows) {
+                    $alertas = Usuario::getAlertas();
+                }
             }
         }
 
