@@ -45,7 +45,8 @@ class LoginController
                 if ($resultado->num_rows) {
                     $alertas = Usuario::getAlertas();
                 } else {
-                    // No está registrado
+                    // Hasheamos el password
+                    $usuario->hashPassword();
                     $alertas['exito'][] = 'Cuenta creada correctamente';
                 }
             }
