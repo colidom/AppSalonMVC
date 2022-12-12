@@ -44,6 +44,9 @@ class LoginController
 
                 if ($resultado->num_rows) {
                     $alertas = Usuario::getAlertas();
+                } else {
+                    // No está registrado
+                    $alertas['exito'][] = 'Cuenta creada correctamente';
                 }
             }
         }
