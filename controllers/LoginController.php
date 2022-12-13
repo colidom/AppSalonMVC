@@ -47,7 +47,12 @@ class LoginController
                 } else {
                     // Hasheamos el password
                     $usuario->hashPassword();
-                    $alertas['exito'][] = 'Cuenta creada correctamente';
+
+                    // Generar token único
+                    $usuario->crearToken();
+
+                    debuguear($usuario);
+                    /* $alertas['exito'][] = 'Cuenta creada correctamente'; */
                 }
             }
         }
