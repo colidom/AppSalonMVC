@@ -38,7 +38,8 @@ class Email
         $mail->CharSet = "UTF-8";
 
         $contenido = "<html>";
-        $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has creado tu cuenta en App Salon, solo debes confirmarla presionando en el siguiente enlace</p>";
+        $contenido .= "<p><strong>Hola " . $this->nombre . ",</br>";
+        $contenido .= "</strong> Has creado tu cuenta en App Salon, solo debes confirmarla presionando en el siguiente enlace</p>";
         $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/confirmar-cuenta?token=" . $this->token . "'>Confirmar cuenta</a></p>";
         $contenido .= "<p>Si no has creado esta cuenta, puedes ignorar este correo</p>";
         $contenido .= "</html>";
