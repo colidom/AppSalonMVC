@@ -50,7 +50,7 @@ class LoginController
             $alertas = $usuario->validarNuevaCuenta();
 
             // Revisar que alertas esté vacío
-            if (empty($aleras)) {
+            if (empty($alertas)) {
                 // Verificar que el usuario no este registrado
                 $resultado = $usuario->existeUsuario();
 
