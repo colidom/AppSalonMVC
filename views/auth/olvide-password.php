@@ -1,6 +1,9 @@
 <h1 class="nombre-pagina">Recuperar cuenta</h1>
 <p class="descripcion-pagina">Introduzca su email para recupear su cuenta ya existente</p>
 
+<?php
+include_once __DIR__ . "/../templates/alertas.php"
+?>
 <form class="formulario" method="POST" action="/olvide">
     <div class="campo">
         <label for="email">Email</label>
