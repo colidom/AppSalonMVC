@@ -10,10 +10,10 @@ include_once __DIR__ . "/../templates/alertas.php"
         <label for="password">Contraseña</label>
         <input type="password" id="password" placeholder="Tu nuevo password" name="password">
     </div>
-    <div class="campo">
+    <!--     <div class="campo">
         <label for="password">Confirmar contraseña</label>
         <input type="password" id="password" placeholder="Tu nuevo password" name="password">
-    </div>
+    </div> -->
 
     <input type="submit" class="boton" value="Guardar nueva contraseña">
 </form>
