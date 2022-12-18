@@ -13,11 +13,6 @@ if ($error) return;
         <label for="password">Contraseña</label>
         <input type="password" id="password" placeholder="Tu nuevo password" name="password">
     </div>
-    <!--     <div class="campo">
-        <label for="password">Confirmar contraseña</label>
-        <input type="password" id="password" placeholder="Tu nuevo password" name="password">
-    </div> -->
-
     <input type="submit" class="boton" value="Guardar nueva contraseña">
 </form>
 
