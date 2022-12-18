@@ -8,7 +8,7 @@ include_once __DIR__ . "/../templates/alertas.php"
 <?php
 if ($error) return;
 ?>
-<form class="formulario" action="/" method="POST">
+<form class="formulario" method="POST">
     <div class="campo">
         <label for="password">Contraseña</label>
         <input type="password" id="password" placeholder="Tu nuevo password" name="password">
