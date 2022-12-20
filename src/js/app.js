@@ -5,11 +5,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function iniciarApp() {
-  tabs(); // Cambia la sección cuando se presiconan los tabs
+  tabs(); // Cambia la sección cuando se presionan los tabs
 }
 
 function mostrarSeccion() {
-  console.log("Mostrando");
+  // Ocultar la sección que tenga a clase de mostrar
+  const seccionAnterior = document.querySelector(".mostrar");
+
+  if (seccionAnterior) {
+    seccionAnterior.classList.remove("mostrar");
+  }
+
+  // Seleccionar la sección con el paso
+  const pasoSelector = `#paso-${paso}`;
+  const seccion = document.querySelector(pasoSelector);
+  seccion.classList.add("mostrar");
 }
 
 function tabs() {
