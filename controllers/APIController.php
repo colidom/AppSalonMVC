@@ -9,6 +9,6 @@ class APIController
     public static function index()
     {
         $servicios = Servicio::all();
-        debuguear(json_encode($servicios));
+        echo json_encode($servicios);
     }
 }
