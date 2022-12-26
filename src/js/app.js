@@ -25,6 +25,8 @@ function iniciarApp() {
   nombreCliente(); // Añade el nombre cliente al objeto de cita
   seleccionarFecha(); // Añade la fecha de la cita en el objeto
   seleccionarHora(); // Añade la hora de la cita en el objeto
+
+  mostrarResumen(); // Muestra el resumen de la cita
 }
 
 function mostrarSeccion() {
@@ -74,6 +76,7 @@ function botonesPaginador() {
   } else if (paso == 3) {
     paginaAnterior.classList.remove("ocultar");
     paginaSiguiente.classList.add("ocultar");
+    mostrarResumen();
   } else {
     paginaAnterior.classList.remove("ocultar");
     paginaSiguiente.classList.remove("ocultar");
@@ -205,4 +208,14 @@ function mostrarAlerta(mensaje, tipo) {
   setTimeout(() => {
     alerta.remove();
   }, 3000);
+}
+
+function mostrarResumen() {
+  const resumen = document.querySelector(".contenido-resumen");
+
+  if (Object.values(cita).includes("")) {
+    console.log("Faltan datos");
+  } else {
+    console.log("Todo BIEN");
+  }
 }
