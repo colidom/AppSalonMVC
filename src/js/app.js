@@ -70,10 +70,10 @@ function botonesPaginador() {
   const paginaAnterior = document.querySelector("#anterior");
   const paginaSiguiente = document.querySelector("#siguiente");
 
-  if (paso == 1) {
+  if (paso === 1) {
     paginaAnterior.classList.add("ocultar");
     paginaSiguiente.classList.remove("ocultar");
-  } else if (paso == 3) {
+  } else if (paso === 3) {
     paginaAnterior.classList.remove("ocultar");
     paginaSiguiente.classList.add("ocultar");
     mostrarResumen();
@@ -169,7 +169,7 @@ function seleccionarFecha() {
     const dia = new Date(e.target.value).getUTCDay();
     if ([6, 0].includes(dia)) {
       e.target.value = "";
-      mostrarAlerta("Fines de semana no permitidos", "error");
+      mostrarAlerta("Fines de semana no permitidos", "error", ".formulario");
     } else {
       cita.fecha = e.target.value;
     }
@@ -183,17 +183,20 @@ function seleccionarHora() {
     const hora = horaCita.split(":")[0];
     if (hora < 9 || hora > 20) {
       e.target.value = "";
-      mostrarAlerta("Cerrado en la hora seleccionada", "error");
+      mostrarAlerta("Cerrado en la hora seleccionada", "error", ".formulario");
     } else {
       cita.hora = e.target.value;
     }
   });
 }
 
-function mostrarAlerta(mensaje, tipo) {
+function mostrarAlerta(mensaje, tipo, elemento, desaparece = true) {
   // Previene que se generen más de una alerta
   const alertaPrevia = document.querySelector(".alerta");
   if (alertaPrevia) return;
+  if (alertaPrevia) {
+    alertaPrevia.remove();
+  }
 
   // Scripting para crear la alerta
   const alerta = document.createElement("DIV");
@@ -201,20 +204,27 @@ function mostrarAlerta(mensaje, tipo) {
   alerta.classList.add("alerta");
   alerta.classList.add(tipo);
 
-  const formulario = document.querySelector(".formulario");
-  formulario.appendChild(alerta);
+  const referencia = document.querySelector(elemento);
+  referencia.appendChild(alerta);
 
-  // Eliminar alerta
-  setTimeout(() => {
-    alerta.remove();
-  }, 3000);
+  if (desaparece) {
+    // Eliminar alerta
+    setTimeout(() => {
+      alerta.remove();
+    }, 3000);
+  }
 }
 
 function mostrarResumen() {
   const resumen = document.querySelector(".contenido-resumen");
 
-  if (Object.values(cita).includes("")) {
-    console.log("Faltan datos");
+  if (Object.values(cita).includes("") || cita.servicios.length === 0) {
+    mostrarAlerta(
+      "Faltan datos de Servicios, Fecha u Hora",
+      "error",
+      ".contenido-resumen",
+      false
+    );
   } else {
     console.log("Todo BIEN");
   }
