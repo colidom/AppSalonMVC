@@ -309,6 +309,7 @@ async function reservarCita() {
 
   const respuesta = await fetch(url, {
     method: "POST",
+    body: datos,
   });
 
   const resultado = await respuesta.json();
