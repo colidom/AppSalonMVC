@@ -34,11 +34,7 @@ class APIController
             // Guarda los Servicios con el ID de la Cita
             $citaServicio->guardar();
         }
-        // Retornamos una respuesta
-        $respuesta = [
-            'resultado' => $resultado
-        ];
 
-        echo json_encode($respuesta);
+        echo json_encode(['resultado' => $resultado]);
     }
 }
