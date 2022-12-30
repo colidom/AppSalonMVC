@@ -18,7 +18,7 @@ class AdminCita extends ActiveRecord
     public $servicio;
     public $precio;
 
-    public function __construct($args)
+    public function __construct()
     {
         $this->id = $args['id'] ?? null;
         $this->hora = $args['hora'] ?? '';
