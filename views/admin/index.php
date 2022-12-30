@@ -31,8 +31,7 @@ include_once __DIR__ . '/../templates/barra.php'
             } // Fin de if 
                 ?>
                 <p class="servicios"><?php echo $cita->servicio . " " . $cita->precio . "€"; ?></p>
-                </li>
-            <?php } // Fin de ForEach 
+            <?php } // Fin de ForEach  
             ?>
     </ul>
 </div>
