@@ -135,7 +135,14 @@ class ActiveRecord
     {
         $query = "SELECT * FROM " . static::$tabla  . " WHERE {$columna} = '${valor}'";
         $resultado = self::consultarSQL($query);
-        return array_shift($resultado);
+        return array_shift($resultado); // array_shift devuelve el primer elemento de un array
+    }
+
+    // Consulta plana de SQL (Utiliza cuando los métodos los modelo no son suficientes)
+    public static function SQL($query)
+    {
+        $resultado = self::consultarSQL($query);
+        return $resultado;
     }
 
     // Obtener Registros con cierta cantidad
