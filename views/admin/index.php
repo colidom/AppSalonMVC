@@ -30,7 +30,7 @@ include_once __DIR__ . '/../templates/barra.php'
                 $idCita = $cita->id;
             } // Fin de if 
                 ?>
-                <p class="servicios"><?php echo $cita->servicio . " " . $cita->precio . "€"; ?></p>
+                <p class="servicio"><?php echo $cita->servicio . " " . $cita->precio . "€"; ?></p>
             <?php } // Fin de ForEach  
             ?>
     </ul>
