@@ -20,6 +20,7 @@
         border: none;
         padding: calc(v.$separacion / 4);
         border-radius: 1rem;
+        margin-right: 10%;
 
         &:disabled {
             background-color: lighten(v.$negro, 30%);
