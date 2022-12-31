@@ -9,6 +9,7 @@ class AdminController
 {
     public static function index(Router $router)
     {
+        iSadmin();
         $fecha = $_GET['fecha'] ?? date('Y-m-d');
         $fechas = explode('-', $fecha);
 
