@@ -13,6 +13,13 @@ include_once __DIR__ . '/../templates/barra.php'
         </div>
     </form>
 </div>
+
+<?php
+if (count($citas) === 0) {
+    echo "<h2>No se encontraron citas para la fecha seleccionada</h2>";
+}
+?>
+
 <div id="citas-admin">
     <ul class="citas">
         <?php
