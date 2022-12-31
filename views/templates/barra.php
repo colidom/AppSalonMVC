@@ -9,6 +9,6 @@
         <a href="/servicios" class="boton">Ver servicios</a>
         <a href="/servicios/crear" class="boton">Nuevo servicio</a>
     </div>
-    } else {
-    echo "No es admin";
+<?php } else {
+    echo "No es admin"; ?>
 <?php } ?>
