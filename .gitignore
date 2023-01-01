@@ -24,5 +24,4 @@
 /app/Config/database.php
 /vendors/*
 node_modules/*
-composer.lock
 includes/.env
