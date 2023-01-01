@@ -12,7 +12,7 @@ class ServicioController
         isAdmin();
 
         $servicios = Servicio::all();
-        debuguear($servicios);
+
         $router->render('servicios/index', [
             'nombre' => $_SESSION['nombre'],
             'servicios' => $servicios
