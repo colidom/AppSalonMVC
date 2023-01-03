@@ -4,6 +4,6 @@
 </div>
 
 <div class="campo">
-    <label for="precio">Nombre</label>
+    <label for="precio">Precio</label>
     <input type="number" id="precio" placeholder="Precio servicio" name="precio" value="<?php echo $servicio->precio ?>">
 </div>
